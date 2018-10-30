@@ -1,4 +1,6 @@
-<?php
+<?php use yii\log\FileTarget;
+	use yii\caching\FileCache;
+	
 	/**
 	 * Created by PhpStorm.
 	 * User: splaa
@@ -6,8 +8,8 @@
 	 * Time: 11:47
 	 */
 	Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
-	$params = require(__DIR__ . '/params.php');
-	$db = require(__DIR__ . '/db.php');
+	$params = require __DIR__ . '/params.php';
+	$db = require __DIR__ . '/db.php';
 	$config = [
 		'id' => 'basic-console',
 		'basePath' => dirname(__DIR__),
@@ -15,12 +17,12 @@
 		'controllerNamespace' => 'app\commands',
 		'components' => [
 			'cache' => [
-				'class' => 'yii\caching\FileCache',
+				'class' => FileCache::class,
 			],
 			'log' => [
 				'targets' => [
 					[
-						'class' => 'yii\log\FileTarget',
+						'class' => FileTarget::class,
 						'levels' => ['error', 'warning'],
 					],
 				],
