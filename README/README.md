@@ -15,4 +15,4 @@
 ---
 [My Tests repo GitHub ....](https://github.com/SevenPowerX-PHP/ElisDn-Tests)
 
-Использование sqlite: Exception 'yii\db\Exception' with message 'could not find driver' [install...](). 
+Использование sqlite: Exception 'yii\db\Exception' with message 'could not find driver' [установить php-sqlite по инструкции](https://github.com/SevenPowerX-PHP/ElisDn-Tests/blob/master/README/docs/Info.md). 
