@@ -1,11 +1,9 @@
 <?php
-	
-	
 	/**
 	 * Created by PhpStorm.
 	 * User: splaa
 	 * Date: 30.10.18
-	 * Time: 11:54
+	 * Time: 19:29
 	 */
 	return [
 		'class' => 'yii\db\Connection',
@@ -13,4 +11,4 @@
 		'username' => '',
 		'password' => '',
 		'charset' => 'utf8',
-];
+	];

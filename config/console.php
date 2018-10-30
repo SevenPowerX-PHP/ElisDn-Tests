@@ -1,4 +1,5 @@
-<?php use yii\log\FileTarget;
+<?php
+	use yii\log\FileTarget;
 	use yii\caching\FileCache;
 	
 	/**
@@ -9,9 +10,9 @@
 	 */
 	Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
 	$params = require __DIR__ . '/params.php';
-	$db = require __DIR__ . '/db.php';
+	$db = require __DIR__ . '/dbSqlite.php';
 	$config = [
-		'id' => 'basic-console',
+		'id' => 'console',
 		'basePath' => dirname(__DIR__),
 		'bootstrap' => ['log'],
 		'controllerNamespace' => 'app\commands',
@@ -28,6 +29,11 @@
 				],
 			],
 			'db' => $db,
+		],
+		'controllerMap' => [
+			'migration' => [
+				'class' => 'bizley\migration\controllers\MigrationController',
+			],
 		],
 		'params' => $params,
 	];

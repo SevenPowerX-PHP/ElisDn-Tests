@@ -6,7 +6,7 @@
 	 * Date: 30.10.18
 	 * Time: 11:50
 	 */
-$params = require(__DIR__ . '/params.php');
+$params = require __DIR__ . '/params.php';
 $config = [
 	'id' => 'basic',
 	'basePath' => dirname(__DIR__),
